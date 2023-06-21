@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()">
+          <img src="/assets/Quartet.png" alt="logo" srcset="" class="logo" />
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="gaming"
+              onclick="onNavItemClick('gaming')"
+            >
+              Gaming
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            type="text"
+            id="search-text"
+            class="news-input"
+            placeholder="e.g - Science"
+          />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="news image"
+            id="news-image"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the title</h3>
+          <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+          <p class="news-description" id="news-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ut
+            dolorum, quae cupiditate magni quaerat! Error veritatis explicabo
+            dolore itaque, consequuntur, modi nobis provident incidunt hic quis,
+            dolores iusto architecto.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <footer>
+      <a href="https://github.com/ShubhamYadav7063" target="_blank">GitHub</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
